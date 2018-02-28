@@ -1,0 +1,23 @@
+[index]
+two way to create a index:
+	1.alter table table_name add index index_name(col_name)
+	2.create index index_name on table_name(col_name)
+
+[view]
+a way to create a view:
+	create view view_name(col_a, col_b, col_c) as select col_a, col_b, col_c from table_name
+
+[import/export]
+import:
+	load data INFILE 'FILEPATH' into table table_name
+export:
+	select col_a,col_b into OUTFILE 'FILEPATH' from table_name
+
+[backup]
+different from the export,which just output the data,backup to opreate the database including data_structure,constraint,index,view as a SQL file
+mysqldump:
+	mysqldump -u root database_name > aa.sql
+	mysqldump -u root database_name table_name > bb.sql
+
+[recovery]
+mysql>source /xxx/xxx/aa.sql
