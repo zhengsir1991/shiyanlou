@@ -21,3 +21,6 @@ mysqldump:
 
 [recovery]
 mysql>source /xxx/xxx/aa.sql
+
+[user variable]
+ex:select @min_price:=MIN(price),@max_price:=MAX(price) from shop
